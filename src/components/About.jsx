@@ -38,7 +38,7 @@ function About() {
                 <img
                     src={profileImage}
                     alt="Tord Larsson - Front-end Developer"
-                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-blue-600 dark:border-gold-400 shadow-lg object-cover"
+                    className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full border-4 border-blue-600 dark:border-gold-400 shadow-md shadow-gray-500 dark:shadow-yellow-500 object-cover"
                 />
                 <div className="mt-4 sm:mt-0 max-w-lg text-center sm:text-left">
                     <h1 className="font-regular-heading text-2xl sm:text-3xl md:text-4xl text-blue-700 dark:text-gold-200 mb-3">

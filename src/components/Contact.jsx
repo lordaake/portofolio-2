@@ -4,7 +4,7 @@ import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Contact() {
     return (
-        <section className="contact-section bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 p-8 transition-colors duration-300" id="contact-form-section">
+        <section className="contact-section bg-gradient-to-b from-gray-100 to-white dark:from-gray-800 dark:to-gray-900 p-8 transition-colors duration-0" id="contact-form-section">
             <div className="max-w-3xl mx-auto text-center">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl font-regular-heading mb-6 text-gray-800 dark:text-white">
                     Get in Touch
@@ -19,7 +19,7 @@ function Contact() {
                     <a
                         href="mailto:tordakelarsson@pm.me"
                         itemProp="email"
-                        className="text-2xl font-medium text-blue-500 dark:text-indigo-300 hover:underline transition-colors duration-300"
+                        className="text-2xl font-medium text-blue-500 dark:text-indigo-300 hover:underline transition-colors duration-0"
                     >
                         tordakelarsson@pm.me
                     </a>

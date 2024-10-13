@@ -136,63 +136,131 @@ function Projects() {
 
     return (
         <section
-            className="container-all-projects bg-gray-50 dark:bg-gray-900 p-8 duration-300 shadow-custom-light-blue"
+            className="container-all-projects bg-gray-100 dark:bg-gray-800 p-6 sm:p-8 md:p-10 duration-0 shadow-custom-light-blue border-b-2 border-gray-300 dark:border-gray-600"
             id="container-all-projects"
         >
-            <h3 className="text-2xl sm:text-3xl md:text-4xl font-regular-heading text-center mb-8 text-gray-800 dark:text-white">
+            {/* Heading */}
+            <h3 className="text-lg sm:text-xl md:text-2xl font-regular-heading text-center mb-6 text-gray-800 dark:text-white">
                 Stuff I have made
             </h3>
-            <div className="flex justify-center">
+
+            {/* Top Three Projects as Smaller Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {projects.slice(0, 3).map((project) => (
+                    <div
+                        key={project.name}
+                        className="bg-white dark:bg-gray-700 rounded-md shadow-md p-4 hover:scale-105 transition-transform duration-0"
+                    >
+                        {/* Project Title */}
+                        <h3 className="text-base sm:text-lg md:text-xl font-regular-heading text-gray-800 dark:text-white mb-2">
+                            {project.name}
+                        </h3>
+
+                        {/* Project Image */}
+                        {project.image && (
+                            <img
+                                src={project.image}
+                                alt={`${project.name} screenshot`}
+                                className="w-full h-32 sm:h-40 md:h-48 object-cover mb-2 rounded shadow-sm"
+                            />
+                        )}
+
+                        {/* Project Description */}
+                        <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-3">
+                            {project.description}
+                        </p>
+
+                        {/* Project Links */}
+                        <div className="flex space-x-2">
+                            {project.live && (
+                                <a
+                                    href={project.live}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-500 dark:text-indigo-400 hover:underline text-sm sm:text-base"
+                                >
+                                    Live Site
+                                </a>
+                            )}
+                            {project.github && (
+                                <a
+                                    href={project.github}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-blue-500 dark:text-indigo-400 hover:underline text-sm sm:text-base"
+                                >
+                                    GitHub
+                                </a>
+                            )}
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            {/* View All Projects Button */}
+            <div className="flex justify-center mt-6">
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="bg-blue-500 dark:bg-indigo-600 text-base sm:text-lg md:text-xl text-white dark:text-gray-100 px-6 py-3 rounded-full shadow-md hover:bg-blue-600 dark:hover:bg-indigo-700 transition-colors duration-300 font-semibold"
+                    className="bg-blue-500 dark:bg-indigo-600 text-sm sm:text-base md:text-lg text-white dark:text-gray-100 px-5 py-2 rounded-full shadow-md hover:bg-blue-600 dark:hover:bg-indigo-700 transition-colors duration-0 font-semibold"
                 >
                     View All Projects
                 </button>
             </div>
 
+            {/* Modal with All Projects */}
             {isModalOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
                     onClick={() => setIsModalOpen(false)}
                 >
                     <div
-                        className="bg-white dark:bg-gray-900 rounded-lg p-8 max-w-4xl w-full relative overflow-y-auto max-h-[80vh] animate-fadeIn transition-colors duration-300"
+                        className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 md:p-10 max-w-5xl w-full relative overflow-y-auto max-h-[80vh] animate-fadeIn transition-colors duration-0"
                         onClick={(e) => e.stopPropagation()}
                     >
+                        {/* Close Modal Button */}
                         <button
                             onClick={() => setIsModalOpen(false)}
-                            className="absolute top-4 right-4 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-2xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-full"
+                            className="absolute top-4 right-4 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 text-xl sm:text-2xl font-bold focus:outline-none focus:ring-2 focus:ring-blue-300 rounded-full"
                             aria-label="Close Modal"
                         >
                             &times;
                         </button>
-                        <h2 className="text-2xl sm:text-3xl md:text-4xl font-regular-heading mb-8 text-center text-gray-800 dark:text-white">
+
+                        {/* Modal Heading */}
+                        <h2 className="text-lg sm:text-xl md:text-2xl font-regular-heading mb-6 text-center text-gray-800 dark:text-white">
                             All Projects
                         </h2>
-                        <ul className="space-y-6">
+
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                             {projects.map((project) => (
-                                <li key={project.name} className="border-b border-gray-200 dark:border-gray-700 pb-4">
-                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-regular-heading text-gray-800 dark:text-white mb-4">
+                                <li key={project.name} className="bg-white dark:bg-gray-700 rounded-md shadow-md p-4 hover:scale-105 transition-transform duration-0">
+                                    {/* Project Title */}
+                                    <h3 className="text-base sm:text-lg md:text-xl font-regular-heading text-gray-800 dark:text-white mb-2">
                                         {project.name}
                                     </h3>
+
+                                    {/* Project Image */}
                                     {project.image && (
                                         <img
                                             src={project.image}
                                             alt={`${project.name} screenshot`}
-                                            className="w-full max-w-sm h-auto mb-4 rounded shadow-lg"
+                                            className="w-full h-32 sm:h-40 md:h-48 object-cover mb-2 rounded shadow-sm"
                                         />
                                     )}
-                                    <p className="text-base sm:text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-4">
+
+                                    {/* Project Description */}
+                                    <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-300 mb-3">
                                         {project.description}
                                     </p>
-                                    <div className="flex space-x-4 mt-2">
+
+                                    {/* Project Links */}
+                                    <div className="flex space-x-2">
                                         {project.live && (
                                             <a
                                                 href={project.live}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-base sm:text-lg md:text-xl text-blue-500 dark:text-indigo-400 hover:underline transition-colors duration-300"
+                                                className="text-blue-500 dark:text-indigo-400 hover:underline text-sm sm:text-base"
                                             >
                                                 Live Site
                                             </a>
@@ -202,7 +270,7 @@ function Projects() {
                                                 href={project.github}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="text-base sm:text-lg md:text-xl text-blue-500 dark:text-indigo-400 hover:underline transition-colors duration-300"
+                                                className="text-blue-500 dark:text-indigo-400 hover:underline text-sm sm:text-base"
                                             >
                                                 GitHub
                                             </a>
@@ -216,7 +284,10 @@ function Projects() {
             )}
         </section>
     );
+
 }
 
 export default Projects;
+
+
 

@@ -4,7 +4,7 @@ import profileImage from '../assets/profile_image.jpg'; // Adjust the path as ne
 function About() {
     return (
         <section
-            className="profile-container flex flex-col items-center justify-center bg-gradient-to-r from-white/50 via-white to-white dark:from-gray-800/20 dark:via-gray-900 dark:to-indigo-700 shadow-md p-6 sm:p-8 md:p-12 transition-colors duration-300 border-t border-blue-00 dark:border-blue-400 shadow-lg shadow-custom-light-blue"
+            className="profile-container flex flex-col items-center justify-center bg-gradient-to-r from-white/50 via-white to-white dark:from-gray-800/20 dark:via-gray-900 dark:to-indigo-700 shadow-md p-6 sm:p-8 md:p-12 transition-colors duration-0 border-t border-blue-00 dark:border-blue-400 shadow-lg shadow-custom-light-blue"
         >
             {/* Hidden SEO Text */}
             <div className="sr-only">
@@ -79,7 +79,7 @@ function About() {
                         href="https://github.com/lordaake"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center dark:border-2 border-indigo-600 hover:scale-105 space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-300 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
+                        className="flex items-center justify-center dark:border-2 border-indigo-600 hover:scale-105 space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-0 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
                         aria-label="Visit Tord's GitHub Profile"
                     >
                         {/* GitHub Icon */}
@@ -104,7 +104,7 @@ function About() {
                         href="https://www.linkedin.com/in/tord-%C3%A5ke-larsson-6b35b958/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center dark:border-2 border-indigo-600 hover:scale-105 space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-300 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
+                        className="flex items-center justify-center dark:border-2 border-indigo-600 hover:scale-105 space-x-2 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-0 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
                         aria-label="Visit Tord's LinkedIn Profile"
                     >
                         {/* LinkedIn Icon */}
@@ -127,7 +127,7 @@ function About() {
                         href="https://www.facebook.com/profile.php?id=100069593492154" // Replace with your actual Facebook profile URL
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center space-x-2 dark:border-2 border-indigo-600 hover:scale-105 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-300 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
+                        className="flex items-center justify-center space-x-2 dark:border-2 border-indigo-600 hover:scale-105 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-0 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
                         aria-label="Visit Tord's Facebook Profile"
                     >
                         {/* Facebook Icon */}
@@ -150,7 +150,7 @@ function About() {
                         href="https://www.tiktok.com/@lordaake"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center space-x-2 dark:border-2 border-indigo-600 hover:scale-105 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-300 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
+                        className="flex items-center justify-center space-x-2 dark:border-2 border-indigo-600 hover:scale-105 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-0 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
                         aria-label="Visit Tord's TikTok Profile"
                     >
                         {/* TikTok Icon */}
@@ -173,7 +173,7 @@ function About() {
                         href="https://www.youtube.com/@lordaake"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center space-x-2 border-2 dark:border-indigo-600 hover:scale-105 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-300 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
+                        className="flex items-center justify-center space-x-2 border-2 dark:border-indigo-600 hover:scale-105 text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-gold-400 transition-colors duration-0 p-4 rounded-md bg-blue-100 dark:bg-gray-900"
                         aria-label="Visit Tord's YouTube Channel"
                     >
                         {/* YouTube Icon */}

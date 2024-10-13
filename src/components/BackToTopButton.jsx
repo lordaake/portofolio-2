@@ -27,7 +27,7 @@ function BackToTopButton() {
             <button
                 id="backToTop"
                 onClick={scrollToTop}
-                className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-full shadow-lg hover:from-indigo-600 hover:to-blue-500 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 z-50"
+                className="fixed bottom-8 right-8 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-4 rounded-full shadow-lg hover:from-indigo-600 hover:to-blue-500 transition-all duration-0 focus:outline-none focus:ring-4 focus:ring-blue-300 z-50"
                 aria-label="Back to Top"
             >
                 <ArrowUpIcon className="h-6 w-6" />

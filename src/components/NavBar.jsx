@@ -15,7 +15,7 @@ function NavBar() {
     ];
 
     return (
-        <header className="fixed top-0 w-full bg-white dark:bg-gray-800 shadow dark:shadow-white-bottom z-50 transition-colors duration-300">
+        <header className="fixed top-0 w-full bg-white dark:bg-gray-800 shadow dark:shadow-white-bottom z-50 transition-colors duration-0">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     {/* Logo */}
@@ -39,7 +39,7 @@ function NavBar() {
                                     smooth={true}
                                     duration={500}
                                     offset={-64} // Adjust if navbar height changes
-                                    className="cursor-pointer text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300"
+                                    className="cursor-pointer text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-0"
                                 >
                                     {item.name}
                                 </ScrollLink>
@@ -92,7 +92,7 @@ function NavBar() {
                                         smooth={true}
                                         duration={500}
                                         offset={-64} // Adjust if navbar height changes
-                                        className="block cursor-pointer text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-300"
+                                        className="block cursor-pointer text-gray-700 dark:text-gray-200 hover:text-blue-500 dark:hover:text-blue-400 px-3 py-2 rounded-md text-base font-medium transition-colors duration-0"
                                         onClick={() => setMenuOpen(false)}
                                     >
                                         {item.name}

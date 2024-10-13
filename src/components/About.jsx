@@ -28,7 +28,7 @@ function About() {
                     "https://www.youtube.com/@lordaake"
                   ],
                   "description": "Tord Larsson is a front-end developer specializing in web applications with React, JavaScript, and CSS.",
-                  "email": "contact@tordlarsson.com"
+                  "email": "tordakelarsson@pm.me"
                 }
                 `}
             </script>
